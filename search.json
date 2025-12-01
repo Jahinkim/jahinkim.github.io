@@ -4,6 +4,20 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Hi, my name it Jahin Kim! welcome to my site. I’m a junior in the Department of English Language and Literature at Kunsan National University. I love English!"
+    "text": "Hi, my name is Jahin Kim! welcome to my site. I’m a junior in the Department of English Language and Literature at Kunsan National University. I love English!"
+  },
+  {
+    "objectID": "lm.html",
+    "href": "lm.html",
+    "title": "Language Models",
+    "section": "",
+    "text": "we analyzed texts from Jane Austen’s novels ()."
+  },
+  {
+    "objectID": "lm.html#this-fall-i-have-learned-about-language-models.-first-i-learned-about-n-gram-models-and-later-on-i-also-learned-about-neural-networks.",
+    "href": "lm.html#this-fall-i-have-learned-about-language-models.-first-i-learned-about-n-gram-models-and-later-on-i-also-learned-about-neural-networks.",
+    "title": "Language Models",
+    "section": "",
+    "text": "we analyzed texts from Jane Austen’s novels ()."
   }
 ]
