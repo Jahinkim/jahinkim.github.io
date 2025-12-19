@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Home – About My English</title>
+<title>About – About My English</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -88,11 +88,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link active" href="./about.html" aria-current="page"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -116,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Home</h1>
+<h1 class="title">About</h1>
 </div>
 
 
@@ -142,36 +142,24 @@ html, body {
     radial-gradient(circle at 0% 0%, #ffffff 0, transparent 55%),
     radial-gradient(circle at 100% 100%, #a3d9ff 0, transparent 55%),
     #E8F6FF;
-  color: #B8B8B8;
   font-family: "Poppins", "Pretendard", sans-serif;
-  font-size: 17px;
-  line-height: 1.7;
   min-height: 100vh;
-  height: 100vh;
   overflow-x: hidden;
 }
 
-/* ───── NAVBAR ───── */
-
+/* NAVBAR ----------------------- */
 nav.navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   background: transparent !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
   padding: 0;
   z-index: 1000;
 }
-
 .navbar-toggler { display: none !important; }
 
-/* 가운데 ABOUT MY ENGLISH */
 .navbar-brand {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   font-size: 0.85rem;
   letter-spacing: 0.16em;
@@ -187,52 +175,46 @@ nav.navbar {
   gap: 10px;
 }
 
-/* + 아이콘 */
+/* + BUTTON ----------------------- */
 .icon-plus {
   background: transparent;
   border: none;
   color: #B8B8B8;
   font-size: 2rem;
   cursor: pointer;
+  width: 42px;
+  height: 42px;
   border-radius: 14px;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  width: 42px;
-  height: 42px;
-
   transition:
     background 0.25s ease,
     color 0.25s ease,
     box-shadow 0.35s ease;
 }
-
 .icon-plus-symbol {
-  display: block;
-  transform-origin: center;
   transition: transform 0.35s ease;
+  transform-origin: center;
 }
-
 .icon-plus:hover {
   background: rgba(255,255,255,0.18);
   color: #fff;
   box-shadow: 0 0 12px rgba(255,255,255,0.6);
 }
-
 .icon-plus.open {
   color: #fff;
   box-shadow:
-    0 0 14px rgba(255,255,255,0.85),
-    0 0 22px rgba(129,212,250,0.9);
+    0 0 16px rgba(255,255,255,0.9),
+    0 0 26px rgba(163,217,255,1);
 }
-
 .icon-plus.open .icon-plus-symbol {
   transform: rotate(45deg) scale(1.07);
 }
 
-/* 메뉴 */
+/* MENU ----------------------- */
 .navbar-collapse {
   display: none !important;
   opacity: 0;
@@ -240,76 +222,81 @@ nav.navbar {
   pointer-events: none;
   transition: opacity 0.32s ease, transform 0.32s ease;
 }
-
 .navbar-collapse.open {
   display: block !important;
   position: absolute;
-  top: 50px;
-  right: 0;
-
+  top: 50px; right: 0;
   background: rgba(0,0,0,0.65);
   padding: 10px 0;
-  border-radius: 14px;
   min-width: 180px;
+  border-radius: 14px;
 
   backdrop-filter: blur(18px);
   box-shadow: 0 16px 40px rgba(0,0,0,0.55);
-
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
-
-.navbar-collapse .navbar-nav {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
+.navbar-collapse .navbar-nav { flex-direction: column; }
 .navbar-collapse .nav-link {
-  width: 100%;
   padding: 10px 20px;
   color: #EDEDED !important;
-  text-align: left;
 }
-
 .navbar-collapse .nav-link:hover {
   background: rgba(255,255,255,0.18);
   color: white !important;
 }
 
-/* ───── Home 글씨 (제목) 왼쪽 0px 붙이기 ───── */
+/* PAGE TITLE ----------------------- */
 .page-title, h1.title {
   position: absolute;
   top: 14px;
-  left: 0px;
+  left: 0;
   margin: 0;
   padding: 0;
   font-size: 1.25rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  color: #B8B8B8 !important;
+  color: #CFCFCF !important;
   text-shadow: 0 3px 12px rgba(0,0,0,0.25);
   z-index: 999;
 }
 
-/* ───── 중앙 SPACE 텍스트 ───── */
-.center-space {
+/* TOP TEXT ----------------------- */
+.about-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 12%;
+  transform: translateY(-50%);
+  text-align: left;
 
-  font-size: 6rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
-  color: #E5E5E5;
+  line-height: 1.85rem;
 
+  color: #8A8A8A;
   text-shadow:
-    0 0 18px rgba(255,255,255,0.5),
-    0 0 40px rgba(163,217,255,0.55);
+    0 0 5px rgba(255,255,255,0.32),
+    0 0 14px rgba(163,217,255,0.35);
+}
 
-  user-select: none;
-  pointer-events: none;
+/* DESCRIPTION TEXT ----------------------- */
+.about-desc {
+  position: absolute;
+  top: 58%;             /* ← 확실히 넓힌 간격 */
+  left: 12%;
+  transform: translateY(-50%);
+  text-align: left;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.85rem;
+
+  color: #8A8A8A;
+  text-shadow:
+    0 0 4px rgba(255,255,255,0.30),
+    0 0 10px rgba(163,217,255,0.30);
+
+  max-width: 70%;
 }
 </style>
 <script>
@@ -335,16 +322,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   collapse.addEventListener("click", (e) => e.stopPropagation());
-
   document.addEventListener("click", () => {
     plusBtn.classList.remove("open");
     collapse.classList.remove("open");
   });
 });
 </script>
-<!-- ───── MAIN CONTENT ───── -->
-<div class="center-space">
-<p>SPACE</p>
+<!-- TOP TEXT -->
+<div class="about-text">
+<p>Department of English Language and Literature, Kunsan National University 군산대학교 영어영문학과<br> Jahin Kim 김자인 (Junior)</p>
+</div>
+<!-- DESCRIPTION -->
+<div class="about-desc">
+<p>This webpage is a space for sharing the results of computational linguistics projects studied in the Computer English Linguistics course using R.<br> 이 웹페이지는 R 프로그램을 사용해 컴퓨터 영어학 전공 강의 시간에 학습한 전산언어학에 대한 결과물을 공유하는 공간입니다.</p>
 </div>
 
 
