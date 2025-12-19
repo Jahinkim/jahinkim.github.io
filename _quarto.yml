@@ -1,17 +1,64 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "About My English"
+  title: "My Homepage"
+
   navbar:
+    search: true
+
     left:
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: About
-      - href: lm.qmd
-        text: Language Models
+      - text: Home
+        href: index.html
+      - text: About
+        href: about.html
+
+    right:
+      - text: Language Models
+        href: lm.html
+      - icon: plus
+        aria-label: "More"
+        menu:
+          - text: Extra Page
+            href: about.html   # 필요 없으면 이 icon+menu 블록 자체를 삭제해도 됨
 
 format:
   html:
     theme: cosmo
+    header-includes:
+      - |
+        <style>
+        /* navbar 전체 flex 고정 */
+        .navbar .container-fluid {
+          display: flex !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+        }
+
+        /* 오른쪽 영역 강제 우측 */
+        .navbar-nav.ms-auto {
+          margin-left: auto !important;
+          display: flex !important;
+          align-items: center !important;
+        }
+
+        .navbar-nav.ms-auto .nav-item {
+          display: flex;
+          align-items: center;
+        }
+
+        .navbar-collapse {
+          display: flex !important;
+          justify-content: flex-end !important;
+        }
+
+        @media (max-width: 991px) {
+          .navbar-collapse {
+            justify-content: flex-end !important;
+          }
+        }
+        </style>
+
+
+
