@@ -4,59 +4,41 @@ project:
 
 website:
   title: "My Homepage"
-
   navbar:
-    search: true
-
-   navbar:
-  left:
-    - text: Home
-      href: index.html
-    - text: About
-      href: about.html
-  right:
-    - text: Language Models
-      href: lm.html
-    - icon: plus
-      menu:
-        - text: Music        # 이 위치로 옮겨야 + 버튼 클릭 시 나타납니다.
-          href: music.html
-        - text: Extra Page
-          href: about.html
+    search: false  # 레이아웃 꼬임을 방지하기 위해 잠시 끕니다.
+    left:
+      - text: Home
+        href: index.html
+      - text: About
+        href: about.html
+    right:
+      - text: Language Models
+        href: lm.html
+      - icon: plus
+        menu:
+          - text: Music         # 이제 + 아이콘을 누르면 나옵니다.
+            href: music.html
+          - text: Extra Page
+            href: about.html
 
 format:
   html:
     theme: cosmo
-    header-includes:
-      - |
-        <style>
-        /* navbar 전체 flex 고정 */
-        .navbar .container-fluid {
-          display: flex !important;
-          justify-content: space-between !important;
-          align-items: center !important;
-        }
-
-        /* 오른쪽 영역 강제 우측 */
-        .navbar-nav.ms-auto {
-          margin-left: auto !important;
-          display: flex !important;
-          align-items: center !important;
-        }
-
-        .navbar-nav.ms-auto .nav-item {
-          display: flex;
-          align-items: center;
-        }
-
-        .navbar-collapse {
-          display: flex !important;
-          justify-content: flex-end !important;
-        }
-
-        @media (max-width: 991px) {
-          .navbar-collapse {
-            justify-content: flex-end !important;
-          }
-        }
-        </style>
+    css: styles.css     # CSS는 별도 파일로 관리하는 것이 가장 깔끔합니다.
+    header-includes: |
+      <style>
+      /* 메뉴가 왼쪽으로 쏠리는 현상 방지 */
+      .navbar-container {
+        display: flex !important;
+        justify-content: space-between !important;
+        width: 100%;
+      }
+      .navbar-collapse {
+        flex-grow: 0 !important;
+      }
+      /* 드롭다운 메뉴 스타일 조정 */
+      .dropdown-menu {
+        right: 0 !important;
+        left: auto !important;
+      }
+      </style>
