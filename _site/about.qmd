@@ -1,5 +1,5 @@
 ---
-title: "Language Models"
+title: "About"
 format: html
 ---
 
@@ -14,24 +14,17 @@ html, body {
     radial-gradient(circle at 0% 0%, #ffffff 0, transparent 55%),
     radial-gradient(circle at 100% 100%, #a3d9ff 0, transparent 55%),
     #E8F6FF;
-  color: #B8B8B8;
   font-family: "Poppins", "Pretendard", sans-serif;
-  font-size: 17px;
-  line-height: 1.7;
-  min-height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* ───── NAVBAR ───── */
+/* NAVBAR ----------------------- */
+.navbar-toggler { display: none !important; }
 
-.navbar-toggler {
-  display: none !important;
-}
-
-/* 가운데 ABOUT MY ENGLISH */
 .navbar-brand {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   font-size: 0.85rem;
   letter-spacing: 0.16em;
@@ -39,152 +32,129 @@ html, body {
   text-transform: uppercase;
 }
 
-.navbar .container-fluid {
-  position: relative;
-}
+.navbar .container-fluid { position: relative; }
 
-/* 검색 + + 아이콘 영역 */
 .quarto-navbar-tools {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* + 아이콘 버튼 */
+/* + BUTTON ----------------------- */
 .icon-plus {
   background: transparent;
   border: none;
   color: #B8B8B8;
   font-size: 2rem;
   cursor: pointer;
+  width: 42px;
+  height: 42px;
   border-radius: 14px;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  width: 42px;
-  height: 42px;
-
   transition:
     background 0.25s ease,
     color 0.25s ease,
     box-shadow 0.35s ease;
-  box-shadow: 0 0 0 rgba(255,255,255,0);
 }
-
 .icon-plus-symbol {
-  display: block;
-  transform-origin: center;
   transition: transform 0.35s ease;
+  transform-origin: center;
 }
-
 .icon-plus:hover {
   background: rgba(255,255,255,0.18);
   color: #fff;
   box-shadow: 0 0 12px rgba(255,255,255,0.6);
 }
-
 .icon-plus.open {
   color: #fff;
   box-shadow:
-    0 0 14px rgba(255,255,255,0.85),
-    0 0 22px rgba(129,212,250,0.9);
+    0 0 16px rgba(255,255,255,0.9),
+    0 0 26px rgba(163,217,255,1);
 }
-
 .icon-plus.open .icon-plus-symbol {
   transform: rotate(45deg) scale(1.07);
 }
 
-/* 드롭다운 메뉴 */
-
+/* MENU ----------------------- */
 .navbar-collapse.open {
   display: block !important;
   position: absolute;
-  top: 50px;
-  right: 0;
-
+  top: 50px; right: 0;
   background: rgba(0,0,0,0.65);
   padding: 10px 0;
-  border-radius: 14px;
   min-width: 180px;
+  border-radius: 14px;
 
   backdrop-filter: blur(18px);
   box-shadow: 0 16px 40px rgba(0,0,0,0.55);
-
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
-
-.navbar-collapse .navbar-nav {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
+.navbar-collapse .navbar-nav { flex-direction: column; }
 .navbar-collapse .nav-link {
-  width: 100%;
   padding: 10px 20px;
   color: #EDEDED !important;
-  text-align: left;
 }
-
 .navbar-collapse .nav-link:hover {
   background: rgba(255,255,255,0.18);
   color: white !important;
 }
 
-/* ───── 제목(Language Models)도 Home처럼 왼쪽 0px에 고정 ───── */
+/* PAGE TITLE ----------------------- */
 .page-title, h1.title {
   position: absolute;
   top: 14px;
-  left: 0px;
+  left: 0;
   margin: 0;
   padding: 0;
   font-size: 1.25rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  color: #B8B8B8 !important;
+  color: #CFCFCF !important;
   text-shadow: 0 3px 12px rgba(0,0,0,0.25);
   z-index: 999;
 }
 
-/* 본문이 헤더 안 가리도록 여백 */
-body {
-  padding-top: 90px;
+/* TOP TEXT ----------------------- */
+.about-text {
+  position: absolute;
+  top: 40%;
+  left: 12%;
+  transform: translateY(-50%);
+  text-align: left;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.85rem;
+
+  color: #8A8A8A;
+  text-shadow:
+    0 0 5px rgba(255,255,255,0.32),
+    0 0 14px rgba(163,217,255,0.35);
 }
 
-/* ───── Austen 카드 UI ───── */
+/* DESCRIPTION TEXT ----------------------- */
+.about-desc {
+  position: absolute;
+  top: 58%;             /* ← 확실히 넓힌 간격 */
+  left: 12%;
+  transform: translateY(-50%);
+  text-align: left;
 
-.page-wrapper {
-  padding: 24px 16px 40px;
-}
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.85rem;
 
-.lm-card {
-  display: block;
-  background: rgba(255,255,255,0.16);
-  border-radius: 24px;
-  padding: 28px 24px;
-  border: 1px solid rgba(255,255,255,0.45);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  color: #8A8A8A;
+  text-shadow:
+    0 0 4px rgba(255,255,255,0.30),
+    0 0 10px rgba(163,217,255,0.30);
 
-  max-width: 620px;
-  margin: 40px auto 0;
-
-  color: #B8B8B8;
-  text-decoration: none;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.lm-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 26px 55px rgba(0,0,0,0.48);
-}
-
-h2, p {
-  color: #B8B8B8;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  max-width: 70%;
 }
 </style>
 ```
@@ -193,9 +163,7 @@ h2, p {
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector("nav.navbar");
-  const tools =
-    navbar.querySelector(".quarto-navbar-tools") ||
-    navbar.querySelector(".container-fluid");
+  const tools = navbar.querySelector(".quarto-navbar-tools");
 
   let plusBtn = tools.querySelector("#plusMenuButton");
   if (!plusBtn) {
@@ -215,7 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   collapse.addEventListener("click", (e) => e.stopPropagation());
-
   document.addEventListener("click", () => {
     plusBtn.classList.remove("open");
     collapse.classList.remove("open");
@@ -224,22 +191,14 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 ```
 
-::: page-wrapper
-<a href="austen.html" class="lm-card">
+<!-- TOP TEXT -->
 
-<h2>Austen</h2>
+::: about-text
+Department of English Language and Literature, Kunsan National University 군산대학교 영어영문학과<br> Jahin Kim 김자인 (Junior)
+:::
 
-</a> <a href="gutenberg.html" class="lm-card">
+<!-- DESCRIPTION -->
 
-<h2>Gutenberg</h2>
-
-</a> <a href="ngram.html" class="lm-card">
-
-<h2>N-Gram</h2>
-
-</a> <a href="midterm2025.html" class="lm-card">
-
-<h2>Midterm2025</h2>
-
-</a>
+::: about-desc
+This webpage is a space for sharing the results of computational linguistics projects studied in the Computer English Linguistics course using R.<br> 이 웹페이지는 R 프로그램을 사용해 컴퓨터 영어학 전공 강의 시간에 학습한 전산언어학에 대한 결과물을 공유하는 공간입니다.
 :::
