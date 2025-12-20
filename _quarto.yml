@@ -8,22 +8,21 @@ website:
   navbar:
     search: true
 
-    left:
-      - text: Home
-        href: index.html
-      - text: About
-        href: about.html
-      - text: Music        # 이 줄이 추가되었습니다.
-        href: music.html
-
-    right:
-      - text: Language Models
-        href: lm.html
-      - icon: plus
-        aria-label: "More"
-        menu:
-          - text: Extra Page
-            href: about.html
+   navbar:
+  left:
+    - text: Home
+      href: index.html
+    - text: About
+      href: about.html
+  right:
+    - text: Language Models
+      href: lm.html
+    - icon: plus
+      menu:
+        - text: Music        # 이 위치로 옮겨야 + 버튼 클릭 시 나타납니다.
+          href: music.html
+        - text: Extra Page
+          href: about.html
 
 format:
   html:
