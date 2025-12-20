@@ -7,11 +7,15 @@ website:
 
   navbar:
     search: true
+
     left:
       - text: Home
         href: index.html
       - text: About
         href: about.html
+      - text: Music        # 이 줄이 추가되었습니다.
+        href: music.html
+
     right:
       - text: Language Models
         href: lm.html
@@ -27,39 +31,33 @@ format:
     header-includes:
       - |
         <style>
-        /* 1. 네비바를 화면 최상단에 고정 및 배경 처리 */
-        nav.navbar {
-          position: fixed !important;
-          top: 0 !important;
-          width: 100% !important;
-          background: rgba(255, 255, 255, 0.1) !important;
-          backdrop-filter: blur(10px);
-          z-index: 2000 !important;
-          border-bottom: none !important;
-        }
-
-        /* 2. 네비바 글자색 강제 지정 */
-        .navbar-brand, .nav-link, .navbar-title, .quarto-navigation-tool {
-          color: #B8B8B8 !important;
-        }
-
-        /* 3. 본문 내용이 네비바에 가려지지 않게 여백 추가 */
-        body {
-          padding-top: 80px !important;
-        }
-
-        /* 4. 네비바 요소 정렬 유지 */
+        /* navbar 전체 flex 고정 */
         .navbar .container-fluid {
           display: flex !important;
           justify-content: space-between !important;
           align-items: center !important;
         }
 
+        /* 오른쪽 영역 강제 우측 */
         .navbar-nav.ms-auto {
           margin-left: auto !important;
           display: flex !important;
           align-items: center !important;
         }
+
+        .navbar-nav.ms-auto .nav-item {
+          display: flex;
+          align-items: center;
+        }
+
+        .navbar-collapse {
+          display: flex !important;
+          justify-content: flex-end !important;
+        }
+
+        @media (max-width: 991px) {
+          .navbar-collapse {
+            justify-content: flex-end !important;
+          }
+        }
         </style>
-
-
