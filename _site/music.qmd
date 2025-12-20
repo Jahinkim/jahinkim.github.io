@@ -1,0 +1,411 @@
+---
+title: "Music"
+format: html
+---
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+```{=html}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(circle at 0% 0%, #ffffff 0, transparent 55%),
+    radial-gradient(circle at 100% 100%, #a3d9ff 0, transparent 55%),
+    #E8F6FF;
+  font-family: "Poppins", "Pretendard", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* NAVBAR ----------------------- */
+nav.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: transparent !important;
+  padding: 0;
+  z-index: 1000;
+}
+.navbar-toggler { display: none !important; }
+
+.navbar-brand {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  color: #B8B8B8 !important;
+  text-transform: uppercase;
+}
+
+.navbar .container-fluid { position: relative; }
+
+.quarto-navbar-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* + BUTTON ----------------------- */
+.icon-plus {
+  background: transparent;
+  border: none;
+  color: #B8B8B8;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.35s ease;
+}
+.icon-plus-symbol {
+  transition: transform 0.35s ease;
+  transform-origin: center;
+}
+.icon-plus:hover {
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
+.icon-plus.open {
+  color: #fff;
+  box-shadow:
+    0 0 16px rgba(255,255,255,0.9),
+    0 0 26px rgba(163,217,255,1);
+}
+.icon-plus.open .icon-plus-symbol {
+  transform: rotate(45deg) scale(1.07);
+}
+
+/* MENU ----------------------- */
+.navbar-collapse {
+  display: none !important;
+  opacity: 0;
+  transform: translateY(-12px);
+  pointer-events: none;
+  transition: opacity 0.32s ease, transform 0.32s ease;
+}
+.navbar-collapse.open {
+  display: block !important;
+  position: absolute;
+  top: 50px; right: 0;
+  background: rgba(0,0,0,0.65);
+  padding: 10px 0;
+  min-width: 180px;
+  border-radius: 14px;
+
+  backdrop-filter: blur(18px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.55);
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.navbar-collapse .navbar-nav { flex-direction: column; }
+.navbar-collapse .nav-link {
+  padding: 10px 20px;
+  color: #EDEDED !important;
+}
+.navbar-collapse .nav-link:hover {
+  background: rgba(255,255,255,0.18);
+  color: white !important;
+}
+
+/* PAGE TITLE ----------------------- */
+.page-title, h1.title {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #CFCFCF !important;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.25);
+  z-index: 999;
+}
+
+/* TOP TEXT ----------------------- */
+.about-text {
+  position: absolute;
+  top: 40%;
+  left: 12%;
+  transform: translateY(-50%);
+  text-align: left;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.85rem;
+
+  color: #8A8A8A;
+  text-shadow:
+    0 0 5px rgba(255,255,255,0.32),
+    0 0 14px rgba(163,217,255,0.35);
+}
+
+/* DESCRIPTION TEXT ----------------------- */
+.about-desc {
+  position: absolute;
+  top: 58%;             /* ← 확실히 넓힌 간격 */
+  left: 12%;
+  transform: translateY(-50%);
+  text-align: left;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.85rem;
+
+  color: #8A8A8A;
+  text-shadow:
+    0 0 4px rgba(255,255,255,0.30),
+    0 0 10px rgba(163,217,255,0.30);
+
+  max-width: 70%;
+}
+
+<style>
+/* ... 기타 스타일 유지 ... */
+
+/* TOP TEXT ----------------------- */
+.about-text {
+  position: absolute;
+  top: 42%;             /* 글자 위치 살짝 아래로 */
+  left: 12%;
+  transform: translateY(-50%);
+  font-family: 'Poppins', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #2C3E50;
+}
+
+<style>
+/* 기본 배경 및 폰트 설정 */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 0% 0%, #ffffff 0, transparent 55%),
+              radial-gradient(circle at 100% 100%, #a3d9ff 0, transparent 55%),
+              #E8F6FF;
+  font-family: "Poppins", "Pretendard", sans-serif;
+  min-height: 100vh;
+}
+
+/* TOP TEXT ----------------------- */
+.about-text {
+  position: absolute;
+  top: 42%;             /* 제목 위치 */
+  left: 12%;
+  transform: translateY(-50%);
+  font-family: 'Poppins', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #2C3E50;
+}
+
+<style>
+/* 기본 배경 및 폰트 설정 */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 0% 0%, #ffffff 0, transparent 55%),
+              radial-gradient(circle at 100% 100%, #a3d9ff 0, transparent 55%),
+              #E8F6FF; [cite: 27]
+  font-family: "Poppins", "Pretendard", sans-serif; [cite: 28]
+  min-height: 100vh;
+}
+
+/* Study Playlist 제목 설정 */
+.about-text {
+  position: absolute;
+  top: 42%;             /* 제목 위치 */ [cite: 29]
+  left: 12%;
+  transform: translateY(-50%);
+  font-family: 'Poppins', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #2C3E50; [cite: 30]
+}
+
+/* 앨범 리스트 컨테이너 - 한 줄에 5개씩 배치 */
+.playlist-container {
+  position: absolute;
+  top: 52%;             /* 제목과의 간격 좁힘 */ 
+  left: 12%;
+  right: 12%;           /* 오른쪽 여백 확보 */
+  display: flex;
+  gap: 25px;            /* 앨범 사이 간격 */
+  flex-wrap: wrap;      /* 5개가 넘어가면 다음 줄로 */
+  padding-bottom: 80px; /* 하단 스크롤 여유 공간 */ 
+}
+
+/* 개별 앨범 아이템 설정 */
+.playlist-item {
+  text-decoration: none;
+  color: inherit;
+  width: calc(20% - 20px); /* 한 줄에 5개 배치를 위한 계산 (100%/5 - 간격) */
+  min-width: 160px;        /* 너무 작아지지 않게 최소 너비 설정 */
+  transition: transform 0.3s ease; [cite: 33]
+}
+
+.playlist-item:hover {
+  transform: translateY(-10px); [cite: 33]
+}
+
+.album-art {
+  width: 100%;             /* 부모 너비에 맞춤 */
+  aspect-ratio: 1 / 1;     /* 정사각형 유지 */
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1); [cite: 34]
+}
+
+.song-info {
+  margin-top: 12px;
+}
+
+.song-title {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; [cite: 35]
+}
+
+.artist-name {
+  display: block;
+  font-size: 0.8rem;
+  color: #8A8A8A;
+  margin-top: 4px; [cite: 36]
+}
+</style>
+
+<div class="about-text">
+  Study Playlist
+</div>
+
+<div class="playlist-container">
+  <a href="https://www.youtube.com/watch?v=u-NC-8sgTd4" target="_blank" class="playlist-item">
+    <img src="https://img.youtube.com/vi/u-NC-8sgTd4/maxresdefault.jpg" class="album-art">
+    <div class="song-info">
+      <span class="song-title">I THINK YOU'RE SPECIAL</span>
+      <span class="artist-name">Justin Bieber, Tems</span>
+    </div>
+  </a>
+
+  <a href="https://www.youtube.com/watch?v=V5MeQd2uK6w" target="_blank" class="playlist-item">
+    <img src="https://img.youtube.com/vi/V5MeQd2uK6w/maxresdefault.jpg" class="album-art">
+    <div class="song-info">
+      <span class="song-title">Wanderlust Ways</span>
+      <span class="artist-name">Jason LaPierre</span>
+    </div>
+  </a>
+
+  <a href="https://www.youtube.com/watch?v=BBDCAwtVKdU" target="_blank" class="playlist-item">
+    <img src="https://img.youtube.com/vi/BBDCAwtVKdU/maxresdefault.jpg" class="album-art">
+    <div class="song-info">
+      <span class="song-title">우리의 밤 (feat. 유승우)</span>
+      <span class="artist-name">유다빈밴드</span>
+    </div>
+  </a>
+
+  <a href="https://www.youtube.com/watch?v=br6NjfR_Q08" target="_blank" class="playlist-item">
+    <img src="https://img.youtube.com/vi/br6NjfR_Q08/maxresdefault.jpg" class="album-art">
+    <div class="song-info">
+      <span class="song-title">Tell me (꿈나라 별나라)</span>
+      <span class="artist-name">JANNABI</span>
+    </div>
+  </a>
+
+  <a href="https://youtu.be/WAQ5_7YFAVo" target="_blank" class="playlist-item">
+    <img src="https://img.youtube.com/vi/WAQ5_7YFAVo/maxresdefault.jpg" class="album-art">
+    <div class="song-info">
+      <span class="song-title">Rich Man</span>
+      <span class="artist-name">aespa</span>
+    </div>
+  </a>
+
+  <a href="https://youtu.be/Xry6B0I3pT8" target="_blank" class="playlist-item">
+    <img src="https://img.youtube.com/vi/Xry6B0I3pT8/maxresdefault.jpg" class="album-art"> 
+    <div class="song-info">
+      <span class="song-title">Zoo (Zootopia 2)</span>
+      <span class="artist-name">Shakira</span>
+    </div>
+  </a>
+
+  <a href="https://youtu.be/DwuJeGYlYyw" target="_blank" class="playlist-item">
+    <img src="https://img.youtube.com/vi/DwuJeGYlYyw/maxresdefault.jpg" class="album-art">
+    <div class="song-info">
+      <span class="song-title">Steal The Show</span>
+      <span class="artist-name">Lauv</span>
+    </div>
+  </a>
+
+  <a href="https://youtu.be/Wk7RrtEGDyo" target="_blank" class="playlist-item">
+    <img src="https://img.youtube.com/vi/Wk7RrtEGDyo/maxresdefault.jpg" class="album-art">
+    <div class="song-info">
+      <span class="song-title">Mia & Sebastian's Theme</span>
+      <span class="artist-name">Justin Hurwitz</span>
+    </div>
+  </a>
+
+  <a href="https://youtu.be/G3lSONLLx70" target="_blank" class="playlist-item">
+    <img src="https://img.youtube.com/vi/G3lSONLLx70/maxresdefault.jpg" class="album-art">
+    <div class="song-info">
+      <span class="song-title">Le Festin</span>
+      <span class="artist-name">Camille</span>
+    </div>
+  </a>
+
+  <a href="https://youtu.be/fuWTcmjnEGY" target="_blank" class="playlist-item">
+    <img src="https://img.youtube.com/vi/fuWTcmjnEGY/maxresdefault.jpg" class="album-art">
+    <div class="song-info">
+      <span class="song-title">Drive It Like You Stole It</span>
+      <span class="artist-name">Sing Street</span>
+    </div>
+  </a>
+</div>
+```
+
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector("nav.navbar");
+  const tools = navbar.querySelector(".quarto-navbar-tools");
+
+  let plusBtn = tools.querySelector("#plusMenuButton");
+  if (!plusBtn) {
+    plusBtn = document.createElement("button");
+    plusBtn.id = "plusMenuButton";
+    plusBtn.className = "icon-plus";
+    plusBtn.innerHTML = '<span class="icon-plus-symbol">+</span>';
+    tools.appendChild(plusBtn);
+  }
+
+  const collapse = navbar.querySelector(".navbar-collapse");
+
+  plusBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    plusBtn.classList.toggle("open");
+    collapse.classList.toggle("open");
+  });
+
+  collapse.addEventListener("click", (e) => e.stopPropagation());
+  document.addEventListener("click", () => {
+    plusBtn.classList.remove("open");
+    collapse.classList.remove("open");
+  });
+});
+</script>
+```
