@@ -68,7 +68,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-/* 네비게이션 바 고정 및 투명화 */
+/* 1. 네비게이션 바 고정 */
 .navbar {
   position: fixed !important;
   top: 0;
@@ -77,16 +77,28 @@ ul.task-list li input[type="checkbox"] {
   border: none !important;
 }
 
-/* 검색창과 아이콘을 오른쪽 끝으로 이동 */
+/* 2. 모바일에서도 메뉴가 숨겨지지 않고 한 줄에 나오도록 강제 (중요) */
 .navbar-container {
   display: flex !important;
+  flex-direction: row !important; /* 수평 정렬 고정 */
+  flex-wrap: nowrap !important;   /* 줄바꿈 방지 */
   justify-content: space-between !important;
-  width: 100% !important;
 }
 
-.quarto-navbar-tools {
+/* 3. 메뉴 항목들이 수직으로 쌓이는 현상 방지 */
+.navbar-collapse {
   display: flex !important;
-  order: 3 !important;
+  flex-basis: auto !important;
+  flex-grow: 1 !important;
+  align-items: center !important;
+}
+
+.navbar-nav {
+  flex-direction: row !important; /* 항목들을 가로로 나열 */
+}
+
+.nav-item {
+  margin-right: 10px; /* 항목 간 간격 조정 */
 }
 
 /* 가독성 보정 */

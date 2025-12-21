@@ -68,7 +68,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-/* 1. 네비게이션 바 고정 및 투명화 (원하셨던 디자인) */
+/* 1. 네비게이션 바 고정 */
 .navbar {
   position: fixed !important;
   top: 0;
@@ -77,19 +77,31 @@ ul.task-list li input[type="checkbox"] {
   border: none !important;
 }
 
-/* 2. 검색창과 아이콘을 오른쪽 끝으로 강제 이동 */
+/* 2. 모바일에서도 메뉴가 숨겨지지 않고 한 줄에 나오도록 강제 (중요) */
 .navbar-container {
   display: flex !important;
+  flex-direction: row !important; /* 수평 정렬 고정 */
+  flex-wrap: nowrap !important;   /* 줄바꿈 방지 */
   justify-content: space-between !important;
-  width: 100% !important;
 }
 
-.quarto-navbar-tools {
+/* 3. 메뉴 항목들이 수직으로 쌓이는 현상 방지 */
+.navbar-collapse {
   display: flex !important;
-  order: 3 !important; /* 도구들을 가장 오른쪽으로 */
+  flex-basis: auto !important;
+  flex-grow: 1 !important;
+  align-items: center !important;
 }
 
-/* 3. 배경과 텍스트가 겹칠 때 가독성 보정 */
+.navbar-nav {
+  flex-direction: row !important; /* 항목들을 가로로 나열 */
+}
+
+.nav-item {
+  margin-right: 10px; /* 항목 간 간격 조정 */
+}
+
+/* 가독성 보정 */
 .nav-link, .navbar-brand {
   color: #B8B8B8 !important;
 }
@@ -129,23 +141,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./lm.html"> 
 <span class="menu-text">Language Models</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-plus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="bi bi-plus" role="img">
-</i> 
- <span class="menu-text"></span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-plus">    
-        <li>
-    <a class="dropdown-item" href="./music.html">
- <span class="dropdown-text">Music</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./music.html"> 
+<span class="menu-text">Music</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./about.html">
- <span class="dropdown-text">Extra Page</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
