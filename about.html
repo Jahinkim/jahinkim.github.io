@@ -189,6 +189,8 @@ html, body {
     radial-gradient(circle at 0% 0%, #ffffff 0, transparent 55%),
     radial-gradient(circle at 100% 100%, #a3d9ff 0, transparent 55%),
     #E8F6FF;
+  /* [추가] 스크롤 해도 배경이 끊기지 않도록 고정 */
+  background-attachment: fixed;
   font-family: "Poppins", "Pretendard", sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
@@ -197,7 +199,8 @@ html, body {
 /* NAVBAR ----------------------- */
 nav.navbar {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0; left: 0;
+  right: 0;
   background: transparent !important;
   padding: 0;
   z-index: 1000;
@@ -236,7 +239,6 @@ nav.navbar {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   transition:
     background 0.25s ease,
     color 0.25s ease,
@@ -272,7 +274,8 @@ nav.navbar {
 .navbar-collapse.open {
   display: block !important;
   position: absolute;
-  top: 50px; right: 0;
+  top: 50px;
+  right: 0;
   background: rgba(0,0,0,0.65);
   padding: 10px 0;
   min-width: 180px;
@@ -310,12 +313,11 @@ nav.navbar {
 
 /* TOP TEXT ----------------------- */
 .about-text {
-  position: absolute;
-  top: 40%;
-  left: 12%;
-  transform: translateY(-50%);
+  /* [수정] absolute를 제거하여 요소가 겹치지 않게 함 */
+  position: relative; 
+  margin-top: 120px;
+  margin-left: 12%;
   text-align: left;
-
   font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.85rem;
@@ -328,10 +330,11 @@ nav.navbar {
 
 /* DESCRIPTION TEXT ----------------------- */
 .about-desc {
-  position: absolute;
-  top: 62%;             /* ← 확실히 넓힌 간격 */
-  left: 12%;
-  transform: translateY(-50%);
+  /* [수정] absolute를 제거하여 아래로 자연스럽게 배치됨 */
+  position: relative; 
+  margin-top: 30px;
+  margin-left: 12%;
+  margin-bottom: 60px;
   text-align: left;
 
   font-size: 0.9rem;
@@ -344,6 +347,12 @@ nav.navbar {
     0 0 10px rgba(163,217,255,0.30);
 
   max-width: 70%;
+}
+
+/* [추가] 이미지가 글자와 겹치지 않도록 간격 추가 */
+.about-desc img {
+  display: block;
+  margin-top: 20px;
 }
 </style>
 <script>
@@ -382,12 +391,15 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- DESCRIPTION -->
 <div class="about-desc">
 <p>This webpage is a space for sharing the results of computational linguistics projects studied in the Computer English Linguistics course using R.<br> 이 웹페이지는 R 프로그램을 사용해 컴퓨터 영어학 전공 강의 시간에 학습한 전산언어학에 대한 결과물을 공유하는 공간입니다.</p>
+<p><strong>Homepage List</strong></p>
 <ul>
 <li>Home</li>
 <li>About</li>
 <li>Language Models</li>
 <li>Music (+)</li>
 </ul>
+<p><strong>Timetable</strong></p>
+<p><img src="images/timetable.jpg" class="img-fluid" width="384"></p>
 </div>
 
 
