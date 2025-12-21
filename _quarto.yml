@@ -14,19 +14,15 @@ website:
     right:
       - text: Language Models
         href: lm.html
-      - icon: plus
-        menu:
-          - text: Music         # 드롭다운 내부로 이동
-            href: music.html
-          - text: Extra Page
-            href: about.html
+      - text: Music
+        href: music.html
 
 format:
   html:
     theme: cosmo
     header-includes: |
       <style>
-      /* 1. 네비게이션 바 고정 및 투명화 (원하셨던 디자인) */
+      /* 네비게이션 바 고정 및 투명화 */
       .navbar {
         position: fixed !important;
         top: 0;
@@ -35,7 +31,7 @@ format:
         border: none !important;
       }
 
-      /* 2. 검색창과 아이콘을 오른쪽 끝으로 강제 이동 */
+      /* 검색창과 아이콘을 오른쪽 끝으로 이동 */
       .navbar-container {
         display: flex !important;
         justify-content: space-between !important;
@@ -44,12 +40,11 @@ format:
 
       .quarto-navbar-tools {
         display: flex !important;
-        order: 3 !important; /* 도구들을 가장 오른쪽으로 */
+        order: 3 !important;
       }
 
-      /* 3. 배경과 텍스트가 겹칠 때 가독성 보정 */
+      /* 가독성 보정 */
       .nav-link, .navbar-brand {
         color: #B8B8B8 !important;
       }
       </style>
-
