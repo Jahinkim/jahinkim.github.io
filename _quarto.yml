@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "My Homepage"
+  navbar:
+    search: true
+    left:
+      - text: Home
+        href: index.html
+      - text: About
+        href: about.html
+    right:
+      - text: Language Models
+        href: lm.html
+      - text: Music
+        href: music.html
+
+format:
+  html:
+    theme: cosmo
+    header-includes: |
+      <style>
+      /* 네비게이션 바 고정 및 투명화 */
+      .navbar {
+        position: fixed !important;
+        top: 0;
+        width: 100%;
+        background-color: transparent !important;
+        border: none !important;
+      }
+
+      /* 검색창과 아이콘을 오른쪽 끝으로 이동 */
+      .navbar-container {
+        display: flex !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+      }
+
+      .quarto-navbar-tools {
+        display: flex !important;
+        order: 3 !important;
+      }
+
+      /* 가독성 보정 */
+      .nav-link, .navbar-brand {
+        color: #B8B8B8 !important;
+      }
+      </style>
