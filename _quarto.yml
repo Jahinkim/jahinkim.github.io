@@ -1,0 +1,65 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "My Homepage"
+  navbar:
+    search: true
+    left:
+      - text: Home
+        href: index.html
+      - text: About
+        href: about.html
+    right:
+      - text: Language Models
+        href: lm.html
+      - text: Music
+        href: music.html
+
+format:
+  html:
+    theme: cosmo
+    header-includes: |
+      <style>
+      /* 1. 네비게이션 바 고정 및 배경 투명화 */
+      .navbar {
+        position: fixed !important;
+        top: 0;
+        width: 100%;
+        background-color: transparent !important;
+        border: none !important;
+        z-index: 1030;
+      }
+
+      /* 2. [핵심] 햄버거 버튼(아이콘)을 완전히 제거 */
+      .navbar-toggler {
+        display: none !important;
+      }
+
+      /* 3. [핵심] 메뉴가 접히지 않고 항상 펼쳐져 있도록 강제 */
+      .navbar-collapse.collapse {
+        display: flex !important;
+        flex-basis: auto !important;
+      }
+
+      /* 4. 항목들이 세로로 쌓이지 않고 가로로 나열되게 고정 */
+      .navbar-nav {
+        flex-direction: row !important;
+        display: flex !important;
+      }
+
+      /* 5. 항목 간 간격 및 글자 색상 */
+      .nav-item {
+        margin-left: 15px !important;
+      }
+
+      .nav-link, .navbar-brand {
+        color: #B8B8B8 !important;
+      }
+
+      /* 본문 내용이 상단바에 가려지지 않게 여백 추가 */
+      body {
+        padding-top: 60px;
+      }
+      </style>
